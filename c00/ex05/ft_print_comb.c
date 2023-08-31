@@ -1,8 +1,9 @@
 #include <unistd.h>
-
+/*
 void print(char n){
 	write(1, &n, 1);
 }
+*/
 
 void ft_print_comb(){
 	char a, b, c;
@@ -13,13 +14,18 @@ void ft_print_comb(){
 		while(b <= '8'){
 			c = b + 1;
 			while(c <= '9'){
-				print(a);
-				print(b);
-				print(c);
+//				print(a);
+//				print(b);
+//				print(c);
+				write(1, &a, 1);
+				write(1, &b, 1);
+				write(1, &c, 1);
 				
 				if (a != '7' || b != '8' || c != '9'){
-					print(',');
-					print(' ');
+//					print(',');
+//					print(' ');
+					write(1, ",", 1);
+					write(1, " ", 1);
 				}
 
 				c++;
